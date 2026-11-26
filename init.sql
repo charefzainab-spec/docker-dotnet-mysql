@@ -1,0 +1,3 @@
+USE myDB;
+CREATE TABLE IF NOT EXISTS emp (id INT PRIMARY KEY, name VARCHAR(50), city VARCHAR(50));
+INSERT INTO emp VALUES (1, 'zainab', 'Ksar Hlel');

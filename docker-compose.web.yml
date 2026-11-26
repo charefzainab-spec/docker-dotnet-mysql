@@ -1,0 +1,15 @@
+services:
+  web:
+    build: ./EmpWeb
+    image: empweb:latest
+    container_name: myWeb
+    restart: always
+    ports:
+      - "5000:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - .env
+    networks:
+      - mynetwork
